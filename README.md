@@ -52,8 +52,12 @@ Seluruh citra menghasilkan status SIGNATURE PRESENT karena nilai rasio piksel ya
 Thresholding diperlukan untuk mengubah citra grayscale menjadi citra biner sehingga bagian foreground dapat dipisahkan dari background. Dengan proses ini, sistem dapat menghitung jumlah piksel yang dianggap sebagai bagian dari tanda tangan secara matematis. Hasil perhitungan tersebut kemudian digunakan untuk menentukan apakah tanda tangan terdeteksi atau tidak.
 
 **2. Apa masalah yang terjadi jika threshold terlalu tinggi atau terlalu rendah?**
+
 •	Jika Threshold Terlalu Rendah: Sistem dapat kehilangan beberapa bagian tanda tangan yang memiliki intensitas berbeda atau kurang gelap. Akibatnya, jumlah piksel foreground menjadi lebih sedikit dan tanda tangan yang sebenarnya ada berpotensi dianggap tidak ada. 
+
 •	Jika Threshold Terlalu Tinggi: Sistem dapat memasukkan lebih banyak bagian dari background sebagai foreground. Noise, pola pada dokumen, atau tekstur kertas dapat ikut dihitung sehingga jumlah piksel meningkat dan berpotensi menyebabkan sistem mendeteksi tanda tangan padahal sebenarnya tidak ada. 
+
 •	Solusi yang Diterapkan: Pada program digunakan Global Thresholding dengan nilai 127 dan Otsu Thresholding yang menentukan threshold secara otomatis. Hasil Otsu kemudian diproses menggunakan operasi Opening dan Closing untuk membantu mengurangi noise dan memperbaiki hasil segmentasi sebelum dilakukan perhitungan rasio piksel. 
+
 Berdasarkan hasil pengujian, seluruh 9 citra menghasilkan status SIGNATURE PRESENT, dengan rasio piksel antara 7.16% sampai 11.69%. Nilai tersebut berada di atas batas keputusan 1.5% yang digunakan oleh sistem.
 
