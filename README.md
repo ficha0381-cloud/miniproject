@@ -27,14 +27,23 @@ Sistem diuji menggunakan 9 citra ijazah dengan resolusi 2481×3506 piksel yang m
 Dari hasil eksekusi program, diperoleh data sebagai berikut:
 
 •	01_HighQuality_Enhanced: 7.41% (PRESENT) 
-•	02_LowContrast: 7.50% (PRESENT) 
+
+•	02_LowContrast: 7.50% (PRESENT)
+
 •	03_Blurred: 11.69% (PRESENT) 
+
 •	04_HighNoise: 7.16% (PRESENT) 
+
 •	05_LowResolution_Upsampled: 9.20% (PRESENT) 
+
 •	06_Faded_Underexposed: 7.63% (PRESENT) 
+
 •	07_ColorShift_WarmTint: 7.52% (PRESENT) 
+
 •	08_JPEGCompression_Artifacts: 7.72% (PRESENT) 
+
 •	09_CombinedDegradation: 8.81% (PRESENT)
+
 Seluruh citra menghasilkan status SIGNATURE PRESENT karena nilai rasio piksel yang diperoleh berada di atas batas 1.5% yang telah ditentukan pada program.
 
 **Analisis & Kesimpulan**
