@@ -11,14 +11,14 @@ Mata Kuliah : Pengolahan Citra Digital
 
 **2.	 Grayscale Conversion**: Mengubah citra berwarna menjadi citra keabuan (grayscale) untuk mempermudah proses pemisahan antara objek dan latar belakang. 
 
-**3.	Thresholding (Global & Otsu): **Mengubah citra grayscale menjadi citra biner untuk memisahkan bagian foreground dari background. Global Thresholding menggunakan nilai threshold tetap sebesar 127, sedangkan Otsu menentukan nilai threshold secara otomatis berdasarkan distribusi intensitas piksel pada citra. 
+**3.	Thresholding (Global & Otsu):** Mengubah citra grayscale menjadi citra biner untuk memisahkan bagian foreground dari background. Global Thresholding menggunakan nilai threshold tetap sebesar 127, sedangkan Otsu menentukan nilai threshold secara otomatis berdasarkan distribusi intensitas piksel pada citra. 
 
-**4.	Morphological Operations: **
+**4.	Morphological Operations:** 
 Opening digunakan untuk membantu menghilangkan noise atau objek kecil yang tidak diperlukan. 
 Closing digunakan untuk membantu menutup celah dan menghubungkan bagian foreground yang terputus.
 Kedua operasi menggunakan kernel berukuran 3×3 piksel. 
 
-**5.	Pixel Ratio Calculation: **Menghitung jumlah piksel foreground menggunakan cv2.countNonZero(), kemudian menghitung persentase piksel foreground terhadap total piksel pada area ROI. Jika rasio melebihi batas 1.5%, sistem menentukan status SIGNATURE PRESENT. Jika tidak melebihi 1.5%, sistem menentukan SIGNATURE ABSENT.
+**5.	Pixel Ratio Calculation:** Menghitung jumlah piksel foreground menggunakan cv2.countNonZero(), kemudian menghitung persentase piksel foreground terhadap total piksel pada area ROI. Jika rasio melebihi batas 1.5%, sistem menentukan status SIGNATURE PRESENT. Jika tidak melebihi 1.5%, sistem menentukan SIGNATURE ABSENT.
 
 **Hasil Pengujian**
 Sistem diuji menggunakan 9 citra ijazah dengan resolusi 2481×3506 piksel yang memiliki berbagai kondisi kualitas citra.
